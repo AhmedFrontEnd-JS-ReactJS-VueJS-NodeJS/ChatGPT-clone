@@ -9,7 +9,7 @@ form.addEventListener('submit', async (event) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       "prompt": input,
