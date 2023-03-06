@@ -9,18 +9,18 @@ form.addEventListener('submit', async (event) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       "prompt": input,
       'model': 'text-davinci-003',
       "max_tokens": 2048,
       "temperature": 0.5,
-      // "top_p": 1,
-      // "n": 1,
-      // "stream": false,
-      // "logprobs": null,
-      //"stop": "\n"
+      "top_p": 1,
+      "n": 1,
+      "stream": false,
+      "logprobs": null,
+      "stop": "\n"
     })
   });
   const data = await response.json();
@@ -37,7 +37,7 @@ for (var i = 0; i <= txt.length; i++) {
 
 
 
-/*
+
   if(data != ''){
     // chat.innerHTML += `<p><strong>OpenAI:</strong> ${data.choices[0].text}</p>`;
     var i = 0;
@@ -53,11 +53,9 @@ for (var i = 0; i <= txt.length; i++) {
       }
     }
   }
-*/
-  //console.log(data);
+  console.log(data);
 
-  // Display the response in the chat div element
-  // chat.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+  chat.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
   
 
 
